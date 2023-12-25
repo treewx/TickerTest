@@ -72,13 +72,8 @@ tickerForm.addEventListener('submit', (event) => {
 
 });
 
-
-const dotenv = require('dotenv');
-dotenv.config(); // Load the environment variables from .env
-
-const ALPHA_VANTAGE_API_KEY = process.env.ALPHA_VANTAGE_API_KEY;
  
-//   const ALPHA_VANTAGE_API_KEY = '6QE0V2GEOGEIN5J9'; // Replace with your API key
+   const ALPHA_VANTAGE_API_KEY = '6QE0V2GEOGEIN5J9'; // Replace with your API key
  
     function loadStock(ticker) {
         // Check if the ticker symbol is valid
