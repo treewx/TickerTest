@@ -72,8 +72,10 @@ tickerForm.addEventListener('submit', (event) => {
 
 });
 
- 
-   const ALPHA_VANTAGE_API_KEY = '6QE0V2GEOGEIN5J9'; // Replace with your API key
+
+
+
+//   const ALPHA_VANTAGE_API_KEY = '6QE0V2GEOGEIN5J9'; // Replace with your API key
  
     function loadStock(ticker) {
         // Check if the ticker symbol is valid
@@ -89,7 +91,7 @@ tickerForm.addEventListener('submit', (event) => {
         }
     
         console.log(`Loading stock: ${ticker}`);
-        fetch(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${ticker}&apikey=${ALPHA_VANTAGE_API_KEY}`)
+        fetch(`https://204am.com/av/av.php?function=OVERVIEW&symbol=${ticker}`)
             .then(response => response.json())
             .then(data => {
                 console.log("API response for", ticker, ":", data);
