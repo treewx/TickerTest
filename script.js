@@ -72,10 +72,6 @@ tickerForm.addEventListener('submit', (event) => {
 
 });
 
-
-
-
-//   const ALPHA_VANTAGE_API_KEY = '6QE0V2GEOGEIN5J9'; // Replace with your API key
  
     function loadStock(ticker) {
         // Check if the ticker symbol is valid
