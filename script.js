@@ -58,7 +58,8 @@ passButton.addEventListener('click', () => {
     let currentMetricsIndex = {}; // Tracks the index of the current metric for each ticker
     let currentAttempts = 0;
     let topScores = {}; // Object to hold top scores for each set
-    const savedTopScores = localStorage.getItem('topScores');
+    const savedTopScores = localStorage.getItem('topScores') || '[]'; // Default to empty array as a string
+
     if (savedTopScores) {
         topScores = JSON.parse(savedTopScores);
     }
