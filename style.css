@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
 /* Basic Reset */
 * {
     margin: 0;
@@ -11,6 +14,17 @@ body {
     color: #333;
     line-height: 1.6;
 }
+header h1 {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat here */
+}
+
+h2 {
+    font-size: 1.4em; 
+    color: #343a40; /* or any color you prefer */
+    font-family: 'Lato', sans-serif; /* Use Lato here */
+}
+
 
 .tickerContainer {
     display: inline-block;
@@ -19,21 +33,23 @@ body {
 }
 
 .deleteButton {
-    color: red;
+    color: #b02020;
     cursor: pointer;
     margin-left: 5px;
 }
 
 
 header {
-    background: #007bff;
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
     color: #fff;
     text-align: center;
     padding: 1rem 0;
 }
 
+
 header h1 {
     margin: 0;
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat here */
 }
 
 main {
@@ -52,9 +68,15 @@ main {
     margin-right: 10px; /* Spacing between Clear Sets and Pass button */
 }
 
+body {
+    background-image: url('bg.png'); /* Replace with your image path */
+    background-size: cover; /* This ensures that your image covers the whole page */
+    background-repeat: no-repeat; /* This will prevent the image from tiling */
+    background-position: center center; /* This centers the image on the page */
+}
 #passButton {
     padding: 10px 20px;
-    background-color: #dc3545; /* Different color to distinguish it */
+    background-color: #b02020; /* Different color to distinguish it */
     color: white;
     border: none;
     cursor: pointer;
@@ -62,7 +84,7 @@ main {
 }
 
 #passButton:hover {
-    background-color: #c82333;
+    background-color: #b02020;
 }
 
 
@@ -87,7 +109,7 @@ main {
 
 #tickerForm button {
     padding: 10px 20px;
-    background-color: #28a745;
+    background-color: #42bf3f;
     color: white;
     border: none;
     cursor: pointer;
@@ -95,7 +117,7 @@ main {
 }
 
 #tickerForm button:hover {
-    background-color: #218838;
+    background-color: #7ee48a;
 }
 
 #scoreDisplay {
@@ -121,6 +143,15 @@ main {
     flex-wrap: wrap;
     gap: 10px; /* Adjust the gap between buttons as needed */
     margin-top: 20px;
+}
+
+@keyframes flashAnimation {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.flash {
+    animation: flashAnimation 1s;
 }
 
 #stockCard {

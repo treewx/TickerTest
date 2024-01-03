@@ -5,22 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stock Metric Challenge Game</title>
     <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    <link rel="icon" href="favicon-16x16.png" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+
 </head>
 <body>
     <header>
-        <h1>Stock Metric Challenge Game</h1>
+        <h1>Stock Ticker Challenge</h1>
+        <h2>Test Your Knowledge on Any Stock</h2> <!-- This is your subtitle -->
     </header>
 
     <main> 
         <!-- Form for entering stock tickers -->
         <section id="tickerInputSection">
                 <form id="tickerForm">
-                    <input type="text" id="tickerInput" placeholder="Enter Stock Ticker">
+                    <input type="text" id="tickerInput" placeholder="Enter Stock Ticker and Start Quiz">
                     <button type="submit">Start Quiz</button>
                 </form>
             </form>
             <div id="scoreDisplay">
-                <p>Score <span id="currentScore">0</span></p>
+                <p><span id="currentScore">0</span></p>
                 <div id="tickerLinksContainer"></div>
             </div>
         </section>

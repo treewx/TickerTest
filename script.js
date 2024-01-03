@@ -359,8 +359,16 @@ function checkAnswer(selectedValue) {
     }
 
     // Update the game board for the next metric
-    scoreDisplay.textContent = `${currentStock}: ${currentMetric} - Score: ${currentScore}`;
-    updateGameBoard();
+scoreDisplay.textContent = `${currentStock}: ${currentMetric} - Score: ${currentScore}`;
+scoreDisplay.classList.add('flash');
+
+// Remove the class after the animation duration
+setTimeout(() => {
+    scoreDisplay.classList.remove('flash');
+}, 1000); // 1000 milliseconds = 1 second
+
+updateGameBoard();
+
 }
     
 });
