@@ -32,8 +32,8 @@
         <section id="setsSection">
             <div id="setsLinks"></div>
             <div id="buttonsContainer"> <!-- Container for the buttons -->
-               
-                <button id="passButton">Pass</button>
+                <span class="questionLabel">Question:</span> <!-- Text label for 'Question' -->
+             
             </div>
         </section>
         
@@ -41,17 +41,25 @@
         <!-- Display area for company name and financial metric -->
         <section id="questionSection">
             <div id="stockCard">
-                <h2 id="companyName"></h2> <!-- Initially blank -->
-                <p id="financialMetric"></p> <!-- Initially blank -->
+                <h2 id="questionText">What is the <span id="financialMetric"></span> for <span id="companyName"></span>?</h2>
             </div>
         </section>
         
+        
         <section id="answerOptions">
-            <button class="answerButton" style="display: none;"></button>
-            <button class="answerButton" style="display: none;"></button>
-            <button class="answerButton" style="display: none;"></button>
-            <button id="nextButton" style="display: none;">Next</button> <!-- Next button added here -->
+            <div class="answersHeader">
+                <h3>Possible Answers</h3>
+            </div>
+            <div class="answersButtons">
+                <button class="answerButton" style="display: none;"></button>
+                <button class="answerButton" style="display: none;"></button>
+                <button class="answerButton" style="display: none;"></button>
+            </div>
+            <button id="passButton">Pass</button>
+            <button id="nextButton" style="display: none;">Next</button>
         </section>
+        
+        
         
     </main>
 

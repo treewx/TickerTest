@@ -107,6 +107,12 @@ body {
     font-size: 16px;
 }
 
+.questionLabel {
+    font-weight: bold;
+    font-size: 1.25rem; /* Adjusts the size of the font relative to the root element */
+}
+
+
 #tickerForm button {
     padding: 10px 20px;
     background-color: #42bf3f;
@@ -162,12 +168,6 @@ body {
     max-width: 300px;
 }
 
-#answerOptions {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-}
 
 .answerButton {
     padding: 10px 20px;
@@ -189,3 +189,20 @@ footer {
     background: #343a40;
     color: #fff;
 }
+#answerOptions .answersHeader {
+    text-align: center; /* Center the header text */
+    margin-bottom: 10px; /* Add some space below the header */
+}
+
+#answerOptions .answersButtons {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+    gap: 10px; /* Add some space between the buttons */
+}
+
+#answerOptions #passButton {
+    display: block; /* Make the button a block element */
+    margin: 10px auto; /* Center the button and add margin for spacing */
+    /* Add any additional styling you need here */
+}
+
