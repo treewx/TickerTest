@@ -88,7 +88,7 @@ tickerForm.addEventListener('submit', (event) => {
         }
     
         console.log(`Loading stock: ${ticker}`);
-        fetch(`https://204am.com/av/av.php?function=OVERVIEW&symbol=${ticker}`)
+        fetch(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${ticker}`)
             .then(response => response.json())
             .then(data => {
                 console.log("API response for", ticker, ":", data);
