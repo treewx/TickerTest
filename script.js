@@ -74,54 +74,54 @@ tickerForm.addEventListener('submit', (event) => {
 });
 
  
-    function loadStock(ticker) {
-        // Check if the ticker symbol is valid
-        if (!ticker || ticker.trim() === '') {
-            alert('Please enter a valid ticker symbol.');
-            return;
-        }
-    
-        // Reset current score and attempts for a new stock
-        if (currentStock !== ticker) {
-            currentScore = 0;
-            currentAttempts = 0;
-        }
-    
-        console.log(`Loading stock: ${ticker}`);
-        fetch(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${ticker}`)
-            .then(response => response.json())
-            .then(data => {
-                console.log("API response for", ticker, ":", data);
-    
-                // Check for API limit or error message
-                if (data.Note) {
-                    alert('API request limit reached or an error occurred.');
-                    return;
-                }
-    
-                // Check if the stock symbol was found
-                if (!data.Symbol) {
-                    alert('Stock not found.');
-                    return;
-                }
-    
-                // Process the stock data
-                processStockData(data);
-    
-                // Add the ticker link
-                addTickerLink(ticker);
-    
-                // Update the score display
-                scoreDisplay.textContent = `${ticker}: ${currentScore}`;
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('Error fetching data:', error);
-    
-                // Handle errors in score display
-                scoreDisplay.textContent = 'Error';
-            });
+   function loadStock(ticker) {
+    // Check if the ticker symbol is valid
+    if (!ticker || ticker.trim() === '') {
+        alert('Please enter a valid ticker symbol.');
+        return;
     }
+
+    // Reset current score and attempts for a new stock
+    if (currentStock !== ticker) {
+        currentScore = 0;
+        currentAttempts = 0;
+    }
+
+    console.log(`Loading stock: ${ticker}`);
+    fetch(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${ticker}&apikey=6QE0V2GEOGEIN5J9`)
+        .then(response => response.json())
+        .then(data => {
+            console.log("API response for", ticker, ":", data);
+
+            // Check for API limit or error message
+            if (data.Note) {
+                alert('API request limit reached or an error occurred.');
+                return;
+            }
+
+            // Check if the stock symbol was found
+            if (!data.Symbol) {
+                alert('Stock not found.');
+                return;
+            }
+
+            // Process the stock data
+            processStockData(data);
+
+            // Add the ticker link
+            addTickerLink(ticker);
+
+            // Update the score display
+            scoreDisplay.textContent = `${ticker}: ${currentScore}`;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error fetching data:', error);
+
+            // Handle errors in score display
+            scoreDisplay.textContent = 'Error';
+        });
+}
     
     
     function updateTopScore(ticker, score) {
